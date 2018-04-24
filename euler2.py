@@ -1,13 +1,14 @@
 #!/bin/python
 
+current=2
 old1=1
-old2=2
-current=3
+old2=0
+out=0
 
-def fib(num):
-    while current < 4000000:
-        print(current) 
-        temp=current
-        old2=old1
-        old1=current
-        current=old1+old2
+while current < 4000000:
+    if current % 2 == 0:
+        out = out + current 
+    old2=old1
+    old1=current
+    current=old1+old2
+print(out) 
